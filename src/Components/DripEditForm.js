@@ -43,8 +43,8 @@ const DripEditForm = () => {
     axios
       .get(`${API}/drip/${id}`)
       .then((response) => setDrip(response.data[0]))
-      .catch((e) => console.error(e));
-  }, [id]);
+      .catch((e) => navigate('/not-found'));
+  }, [id, navigate]);
 
   return (
     <div className="form-container">
