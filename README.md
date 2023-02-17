@@ -13,5 +13,7 @@ Netlify Deployment - https://stupendous-caramel-e83a45.netlify.app/
 Render Deployment - https://fashionapp-backend.onrender.com/
 <br>
 Backend Repo - https://github.com/sreeves07/fashionApp-backend
+<br>
+Frontend Repo - https://github.com/sreeves07/fashion-app-frontend
 
 ### Thank You!
