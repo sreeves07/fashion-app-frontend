@@ -9,7 +9,9 @@ User can see individual item and product availablity.
 
 ## Deployment Links
 Netlify Deployment - https://stupendous-caramel-e83a45.netlify.app/
+<br>
 Render Deployment - https://fashionapp-backend.onrender.com/
+<br>
 Backend Repo - https://github.com/sreeves07/fashionApp-backend
 
 ### Thank You!
