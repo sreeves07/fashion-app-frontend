@@ -100,6 +100,7 @@ const DripNewForm = () => {
               onChange={handleTextChange}
               value={drip.img2_url}
             />
+            <br></br>
             <div>
                 <input id="submit-button" type="submit" />
             </div>

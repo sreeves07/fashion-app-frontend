@@ -2,17 +2,18 @@ import { Link } from "react-router-dom";
 import HoverImage from "./HoverImage";
 
 const Drip = ({ drip }) => {
+  const {id, img2_url, img_url, name, price} = drip
     return (
-        <div className="collectionImg" key={drip?.id}>
-            <Link to={`/drip/${drip?.id}`}>
+        <div className="collectionImg" key={id}>
+            <Link to={`/drip/${id}`}>
                 <HoverImage 
-                img_url={drip?.img_url} 
-                img2_url={drip?.img2_url} 
-                alt={`Image of the ${drip?.name}`} />
+                img_url={img_url} 
+                img2_url={img2_url} 
+                alt={`Image of the ${name}`} />
             </Link>
             
-            <p className="name">{drip?.name}</p>
-            <p>${drip?.price}</p>
+            <p className="name">{name}</p>
+            <p>${price}</p>
 
             
         </div>

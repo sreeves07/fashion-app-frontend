@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import HoverImage from "./HoverImage";
 
 const RelatedDrip = ({ filtered }) => {
@@ -10,15 +11,18 @@ const RelatedDrip = ({ filtered }) => {
         <div className="relatedImages">
                 {filtered.splice(0, 3).map((card) => 
                 <div className="relatedWrapper" key={card.id}>
+                    <Link to={`/drip/${card.id}`}>
                     <HoverImage
                         img_url={card.img_url}
                         img2_url={card.img2_url}
                         width={'250px'}
                         height={'250px'}
-                        alt={`Image of the ${card.name}`} />
+                        alt={`Image of the ${card.name}`} 
+                        />
+                    </Link>
                         <p className="name">{card.name}</p>
                         <p className="relatedPrice">${card.price}</p>
-                        
+                    
                 </div>
                 )}
         </div>

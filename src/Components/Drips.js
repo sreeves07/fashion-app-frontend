@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import Drip from './Drip'
 import axios from "axios"
 import SectionWrapper from "./SectionWrapper";
 const API = process.env.REACT_APP_API_URL
@@ -20,23 +19,22 @@ const Drips = () => {
         return newData;
       }
 
+      const tester = sortData(collection)
+
     useEffect(() => {
         axios.get(`${API}/drip`)
             .then((res) => {
                 setCollection(res.data);
                 setIsLoading(false);
-                console.log(res.data)
             })
-            .catch(err=> console.log(err))
+            .catch((err) => {
+              window.alert("Error cant find drip!");
+            });
     },[])
-    const tester = sortData(collection)
-    console.log(tester)
-
 
     return (
         isLoading ? <h3> Loading... </h3> : 
         <div> 
-        {/* {collection.map((drip) => <Drip key={drip.id} drip={drip}/>)} */}
 
         {Object.keys(tester).map(function (keyName) {
         return (

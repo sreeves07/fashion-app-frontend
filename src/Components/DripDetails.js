@@ -26,18 +26,14 @@ const DripDetails = () => {
             window.alert("Item successfully deleted.");
           })
           .catch((err) => {
-            console.error(err);
-            window.alert("Error, log not deleted.");
+            window.alert("Error, Item not deleted.");
           });
       };
 
     useEffect(() => {
         axios.get(`${API}/drip`)
           .then((response) => {
-            console.log(response.data)
             setRelated(response.data);
-            console.log('calling func...');
-            console.log(getRelatedItems());
           });
         }, []);
 

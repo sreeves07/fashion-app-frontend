@@ -34,21 +34,22 @@
   input[type],
   textarea {
     display: block;
-    width: 90%;
-    /* margin: auto; */
+    width: 100%;
   }
   
   
   input[type="submit"] {
     width: 30%;
-  }
+    justify-content: center;
+}
+
 #submit-button {
-    background-color: rgb(53, 125, 192);
+    background-color:  #ff78fb;
     color: white;
 }
 
 #name, #price, #category, #description, #store_name, #product_url, #img_url, #img2_url {
-    width: 10vw;
+    width: 100%;
     text-align: left;
 }
 
@@ -126,11 +127,13 @@ body {
 .HomeImages img {
     height: 550px;
     width: 550px;
-    text-align: center;
+    padding-left: 10%;
+    
 }
 
 .HomeImages .img1 {
     text-align: center;
+    justify-content: center;
 }
 
 .Home h1 {
