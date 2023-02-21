@@ -1,10 +1,14 @@
 # Fashion App Frontend
 
 ## Welcome to your fashion closet
-User can view their favorite new fashion trends 
-User can add items to view
-User can remove items 
-User can see items organized by category 
+User can view their favorite new fashion trends. 
+<br>
+User can add items to view.
+<br>
+User can remove items. 
+<br>
+User can see items organized by category. 
+<br>
 User can see individual item and product availablity.
 
 ## Deployment Links
