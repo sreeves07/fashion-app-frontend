@@ -2,19 +2,14 @@ import { Link } from "react-router-dom";
 import HoverImage from "./HoverImage";
 
 const RelatedDrip = ({ filtered }) => {
-    function getMultipleRandom(arr, num) {
-        const shuffled = [...arr].sort(() => 0.5 - Math.random());
-      
-        return shuffled.slice(0, num);
-      }
-      
+
     return (
         <>
         
         <h3>You also like</h3>
 
         <div className="relatedImages">
-                {getMultipleRandom(filtered, 3).map((card) => 
+                {filtered.splice(0, 3).map((card) => 
                 <div className="relatedWrapper" key={card.id}>
                     <Link to={`/drip/${card.id}`}>
                     <HoverImage
