@@ -4,7 +4,18 @@ import axios from "axios"
 const API = process.env.REACT_APP_API_URL
 
 const DripNewForm = () => {
-    const navigate = useNavigate();
+    let navigate = useNavigate();
+    const addNewDrip = (newDrip) => {
+      axios
+      .post(`${API}/drip`, newDrip)
+      .then(
+        () => {
+          navigate(`/drip`);
+        },
+        (error) => console.error(error)
+      )
+      .catch((c) => console.warn('catch', c));
+    }
     const [drip, setDrip] = useState({
         name: "",
         price: 0,
@@ -16,26 +27,23 @@ const DripNewForm = () => {
         img2_url: ""
     });
     
-      const handleTextChange = (e) => {
-        setDrip({
-          ...drip,
+    const handleTextChange = (e) => {
+      setDrip({
+        ...drip,
           [e.target.id]: e.target.value,
         });
       };
     
-      const handleNumberChange = (e) => {
-        setDrip({
-          ...drip,
-          [e.target.id]: Number(e.target.value),
-        });
-      };
+    const handleNumberChange = (e) => {
+      setDrip({
+        ...drip,
+        [e.target.id]: Number(e.target.value),
+      });
+    };
     
-      const handleSubmit = (e) => {
-        e.preventDefault();
-        axios
-          .post(`${API}/drip`, drip)
-          .then(() => navigate(`/drip`))
-          .catch((e) => console.error(e));
+    const handleSubmit = (e) => {
+      e.preventDefault();
+      addNewDrip(drip)
       };
     
       return (
